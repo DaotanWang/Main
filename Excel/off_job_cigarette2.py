@@ -26,8 +26,8 @@ for category in categories:
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.265, random_state=42)
 
     # 基础模型
-    xgb = XGBRegressor(n_estimators=400, max_depth=5, learning_rate=0.01, random_state=42)
-    rf = RandomForestRegressor(n_estimators=400, max_depth=5, random_state=42)
+    xgb = XGBRegressor(n_estimators=200, max_depth=5, learning_rate=0.001, random_state=42)
+    rf = RandomForestRegressor(n_estimators=200, max_depth=5, random_state=42)
 
     # 训练基础模型
     xgb.fit(X_train, y_train)
